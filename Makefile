@@ -7,7 +7,7 @@ all: $(O_FILES)
 	@echo $(O_FILES)
 	gcc -o test $(O_FILES)
 
-%.o: %.c
+%.o: %.c %.h
 	gcc -c -o $@ $(patsubst %.o, %.c, $@)
 
 clean:
