@@ -17,6 +17,14 @@ struct node {
     int value;
 };
 
+node* create_node(int value) {
+    node* n = malloc(sizeof(node));
+    n->value = value;
+    n->next = NULL;
+
+    return n;
+}
+
 void add(singlylinkedlist *list, int value) {
     node* new = create_node(value);
 
@@ -59,12 +67,4 @@ void remove(singlylinkedlist *list, int value) {
 
         }
     }
-}
-
-node* create_node(int value) {
-    node* n = malloc(sizeof(node));
-    n->value = value;
-    n->next = NULL;
-
-    return n;
 }

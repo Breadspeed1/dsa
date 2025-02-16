@@ -1,6 +1,5 @@
 
 typedef struct singlylinkedlist singlylinkedlist;
-typedef struct singlenode singlenode;
 
 void add(singlylinkedlist *list, int value);
 
